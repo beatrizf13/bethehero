@@ -1,5 +1,6 @@
 const express = require('express');
 
+const SessionController = require('../controllers/SessionController');
 const OngController = require('../controllers/OngController');
 const IncidentController = require('../controllers/IncidentController');
 const ProfileController = require('../controllers/ProfileController');
@@ -7,6 +8,8 @@ const ProfileController = require('../controllers/ProfileController');
 const routes = express.Router();
 
 routes.get('/', (req, res) => res.json({ status: 'ok' }));
+
+routes.post('/sessions', SessionController.store);
 
 routes.get('/profile', ProfileController.index);
 
