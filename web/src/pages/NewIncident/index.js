@@ -47,7 +47,7 @@ export default function NewIncident() {
         <section>
           <img src={logoImg} alt="Be The Hero" />
           <h1>register new incident</h1>
-          <p>describe the incident in detail to find a hero to solve it.</p>
+          <p>describe the incident in detail to find a hero to solve it</p>
 
           <Link className="back-link" to="/profile">
             <FiArrowLeft size={16} color="#e02041" />
@@ -63,6 +63,7 @@ export default function NewIncident() {
               setTitle(e.target.value);
             }}
           />
+
           <textarea
             placeholder="description"
             value={description}
@@ -70,6 +71,7 @@ export default function NewIncident() {
               setDescription(e.target.value);
             }}
           />
+
           <input
             placeholder="value"
             value={value}
